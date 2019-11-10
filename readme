@@ -1,0 +1,15 @@
+Preprocessing data
+Used geocoder to figure out the exact city of source satation and destination if there is a census data available online we can 
+figure out the population/public trasport of the place, which can help in improving the accuracy of the model.
+Used one hot encoding for train_name,cource_address,destination_address,source_num,destination_num,current_day,is_weekend,i_weekend_train
+Used MinMaxScaler on numeric features.
+As train_name is having high cardinality the data becomes very sparse after the preprocession.
+
+Classifier
+Tried few classifiers like decision tree/random forest/svm/knn/xgb. As the data is very small(1280 rows) no classifier is working
+very well in the sense of accuracy. Most of them overfit. ZEroed down upon xgb as it is really good in capturing non linear relationships
+in the data.Scales well in case data becomes large. hey are able to perform automatic feature selection and capture high-order interactions 
+without breaking down.
+
+
+
